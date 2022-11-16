@@ -50,7 +50,7 @@ decrement.addEventListener('click', ()=>{
 })
 
 decrement10.addEventListener('click', ()=>{
-  if((count + 10) > 0){
+  if(countToNegative == 1){
     count -=10;
   }else{
     count = 0;
@@ -83,7 +83,7 @@ negative.addEventListener('click', ()=>{
 
   negative.style.backgroundColor = 'blue';
   negativeText.textContent = "ON";
-  
+
   if(countToNegative >= 2){
     countToNegative = 0;
     negative.style.backgroundColor = 'transparent';
