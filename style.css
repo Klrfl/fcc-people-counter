@@ -42,7 +42,8 @@ main{
 }
 
 #counter{
-  font-size: 2em;
+  margin: 0;
+  font-size: 3rem;
 }
 
 .saved-entries{
@@ -59,9 +60,14 @@ main{
   justify-content: center;
 }
 
-.increment-container{
+.button-subcontainer{
   display: flex;
   justify-content: center;
+  gap: 1em;
+}
+
+.button-subcontainer > button{
+  flex: 1 1 0;
 }
 
 button{
@@ -76,12 +82,12 @@ button{
   cursor: pointer;
 }
 
-button:not(#increment, #increment10){
+button{
   border-radius: .5em;
 }
 
 button:hover{
-  opacity: .8;
+  background: transparent;
   font-weight: bold;
 }
 
@@ -91,12 +97,14 @@ button:focus{
 
 #increment{
   background: green;
-  flex: 1 1 0;
 }
 
 #increment10{
-  flex: 1 1 0;
   background: rgb(0, 100, 0);
+}
+
+#decrement, #decrement10{
+  outline: 1px solid rgb(0, 100, 0);
 }
 
 #save{
