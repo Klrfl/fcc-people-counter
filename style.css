@@ -36,6 +36,7 @@ main{
 
 .card{
   outline: 1px solid;
+  margin-block: 5em;
   padding: 2em;
   width: min(90%, 75ch);
   text-align: center;
@@ -86,13 +87,16 @@ button{
   border-radius: .5em;
 }
 
+button:active{
+  transform: translateY(5%);
+}
+
 button:hover{
-  background: transparent;
   font-weight: bold;
 }
 
 button:focus{
-  border: 3px solid yellow;
+  outline: 3px solid dodgerblue;
 }
 
 #increment{
@@ -104,7 +108,7 @@ button:focus{
 }
 
 #decrement, #decrement10{
-  outline: 1px solid rgb(0, 100, 0);
+  border: .3rem solid rgb(0, 100, 0);
 }
 
 #save{
@@ -112,12 +116,8 @@ button:focus{
   color: #222;
 }
 
-#resetcount{
-  background: red;
-}
-
 #resetsaved{
-  outline: 2px solid red;
+  border: .3rem solid red;
   text-align: center;
 }
 
