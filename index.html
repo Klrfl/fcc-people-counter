@@ -12,16 +12,23 @@
   <main>
     
     <div class="counter-container">
-      <h1>People (Thing) Counter</h1>
       <div class="info">  
+        <h1>People (Thing) Counter</h1>
         <p>For counting how many people (or things) there are.</p>
         <p><strong>Note: You should enable JS on your browser for this counter to work.</strong></p>
       </div>
+
       <div class="count-container">
-        <p>There are currently</p>
-        <p id="counter">0</p>
-        <p>people (things).</p>
+        <div>
+          <button id="negative" title="include negative numbers">Negative numbers: <span id="negativeText">OFF</span></button>
+        </div>
+        <div>
+          <p>There are currently</p>
+          <p id="counter">0</p>
+          <p>people (or things).</p>
+        </div>
       </div>
+      
       <div class="button-container">
         <div class="button-subcontainer">
           <button id="increment" title="increment count (+1)">Increment</button>
@@ -31,8 +38,10 @@
           <button id="decrement" title="decrement count (-1)">Decrement</button>
           <button id="decrement10" title="decrement count (-10)">Decrement -10</button>
         </div>
-        <button id="save" title="save current count">Save</button>
-        <button id="resetsaved" title="clear saved count">Clear saved count</button>
+        <div class="button-subcontainer">
+          <button id="save" title="save current count">Save</button>
+          <button id="resetsaved" title="clear saved count">Clear saved count</button>
+        </div>
       </div>
       <p class="saved-entries">Previous entries: <span id="saved"></span></p>
     </div>

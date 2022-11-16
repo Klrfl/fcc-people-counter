@@ -1,3 +1,4 @@
+/* dark mode and general reset */
 :root{
   color-scheme: light dark;
 }
@@ -34,12 +35,26 @@ main{
   min-height: 100vh;
 }
 
+/* counter styles */
 .counter-container{
   outline: 1px solid;
   margin-block: 5em;
   padding: 2em;
-  width: min(90%, 75ch);
+  width: min(100%, 105ch);
   text-align: center;
+}
+
+.count-container{
+  padding-block: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* toggle negative numbers */
+#negative{
+  outline: 3px solid azure;
 }
 
 #counter{
@@ -47,14 +62,11 @@ main{
   font-size: 3rem;
 }
 
-.saved-entries{
-  max-width: 75ch;
-}
-
 #saved{
   line-break: anywhere;
 }
 
+/* buttons */
 .button-container{
   display: flex;
   flex-direction: column;
@@ -92,19 +104,16 @@ button:active{
 }
 
 button:hover{
-  font-weight: bold;
+  transform: scale(1.03);
+  color: #ddd;
 }
 
 button:focus{
   outline: 3px solid dodgerblue;
 }
 
-#increment{
+#increment, #increment10{
   background: green;
-}
-
-#increment10{
-  background: rgb(0, 100, 0);
 }
 
 #decrement, #decrement10{
@@ -112,8 +121,7 @@ button:focus{
 }
 
 #save{
-  background: yellowgreen;
-  color: #222;
+  border: 3px solid azure;
 }
 
 #resetsaved{
@@ -121,6 +129,7 @@ button:focus{
   text-align: center;
 }
 
+/* footer */
 footer{
   background: #222;
   padding: 2em;

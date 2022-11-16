@@ -1,20 +1,25 @@
 // buttons
-let counter = document.getElementById('counter');
+const counter = document.getElementById('counter');
 
 // increment
-let increment = document.getElementById('increment');
-let increment10 = document.getElementById('increment10');
+const increment = document.getElementById('increment');
+const increment10 = document.getElementById('increment10');
 // decrement
-let decrement = document.getElementById('decrement');
-let decrement10 = document.getElementById('decrement10');
+const decrement = document.getElementById('decrement');
+const decrement10 = document.getElementById('decrement10');
 
-let save = document.getElementById('save');
+const save = document.getElementById('save');
 
 // paragraph for number and reset button
-let saved = document.getElementById('saved');
-let resetsaved = document.getElementById('resetsaved');
+const saved = document.getElementById('saved');
+const resetsaved = document.getElementById('resetsaved');
+
+// negative number btn
+const negative = document.getElementById('negative');
 
 let count = 0;
+
+// ==== LISTEN TO BUTTONS ====
 
 // listen to increment btn
 increment.addEventListener('click', ()=>{
@@ -30,12 +35,26 @@ increment10.addEventListener('click', ()=>{
 
 // listen to decrement btn
 decrement.addEventListener('click', ()=>{
-  count -=1;
+  // check if countToNegative is true
+  if(countToNegative == 1){
+    count -=1;
+  }else{
+    if(count > 0){
+      count -=1;
+    }else{
+      count = 0;
+    }
+  };
+
   counter.textContent = count;
 })
 
 decrement10.addEventListener('click', ()=>{
-  count -=10;
+  if((count + 10) > 0){
+    count -=10;
+  }else{
+    count = 0;
+  }
   counter.textContent = count;
 })
 
@@ -49,6 +68,29 @@ save.addEventListener('click', ()=>{
   count = 0;
 })
 
+// reset saved entries btn
 resetsaved.addEventListener('click', ()=>{
   saved.textContent = "";
+})
+
+// listen to negative btn
+let countToNegative = 0;
+let negativeText = document.getElementById('negativeText');
+
+// false initially, if clicked then set to true. if clicked AGAIN, then set to false again
+negative.addEventListener('click', ()=>{
+  countToNegative += 1;
+
+  negative.style.backgroundColor = 'blue';
+  negativeText.textContent = "ON";
+  
+  if(countToNegative >= 2){
+    countToNegative = 0;
+    negative.style.backgroundColor = 'transparent';
+    negativeText.textContent = "OFF";
+  }
+
+  // reset count to 0
+  count = 0;
+  counter.textContent = count;
 })
