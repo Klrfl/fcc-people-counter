@@ -34,7 +34,7 @@ main{
   min-height: 100vh;
 }
 
-.card{
+.counter-container{
   outline: 1px solid;
   margin-block: 5em;
   padding: 2em;
@@ -130,12 +130,8 @@ footer{
   align-items: center;
 }
 
-.footer-socials > span{
-  text-align: center;
-}
-
-.footer-socials__links{
-  display: inline;
+footer a{
+  padding: 1em;
 }
 
 @media screen and (max-width: 30em){
