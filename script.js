@@ -9,7 +9,6 @@ let decrement = document.getElementById('decrement');
 let decrement10 = document.getElementById('decrement10');
 
 let save = document.getElementById('save');
-let resetcount = document.getElementById('resetcount');
 
 // paragraph for number and reset button
 let saved = document.getElementById('saved');
@@ -20,39 +19,36 @@ let count = 0;
 // listen to increment btn
 increment.addEventListener('click', ()=>{
   count += 1;
-  counter.innerText = count;
+  counter.textContent = count;
 })
 
 // listen to increment10 btn
 increment10.addEventListener('click', ()=>{
   count += 10;
-  counter.innerText = count;
+  counter.textContent = count;
 })
 
 // listen to decrement btn
 decrement.addEventListener('click', ()=>{
   count -=1;
-  counter.innerText = count;
+  counter.textContent = count;
 })
 
 decrement10.addEventListener('click', ()=>{
   count -=10;
-  counter.innerText = count;
+  counter.textContent = count;
 })
 
 let countstr;
 // listen to save btn
 save.addEventListener('click', ()=>{
   countstr = count + "–";
-  saved.innerText += countstr;
-})
-
-// reset count and reset saved counts btn
-resetcount.addEventListener('click', ()=>{
+  saved.textContent += countstr;
+  // reset counter to 0
+  counter.textContent = "0";
   count = 0;
-  counter.innerText = count;
 })
 
 resetsaved.addEventListener('click', ()=>{
-  saved.innerText = "";
+  saved.textContent = "";
 })
