@@ -12,15 +12,23 @@
     
     <div class="card">
       <h1>People Counter</h1>
-      <p>Count how many people there are on a train station.</p>
-      <p>Note: You should enable JS on your browser to see this counter in action.</p>
+      <div class="info">  
+        <p>Count how many people there are on a train station.</p>
+        <p>Note: You should enable JS on your browser to see this counter in action.</p>
+      </div>
       <div class="count-container">
+        <p>There are currently</p>
         <p id="counter">0</p>
+        <p>people.</p>
       </div>
       <div class="button-container">
-        <div class="increment-container">
+        <div class="button-subcontainer">
           <button id="increment">Increment</button>
           <button id="increment10">Increment +10</button>
+        </div>
+        <div class="button-subcontainer">
+          <button id="decrement">Decrement</button>
+          <button id="decrement10">Decrement -10</button>
         </div>
         <button id="save">Save</button>
         <button id="resetcount">Reset Count</button>
