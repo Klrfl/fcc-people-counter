@@ -1,0 +1,137 @@
+:root{
+  color-scheme: light dark;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+@media(prefers-color-scheme:dark){
+  body{
+    background: #11213f;
+    color: #ddd;
+  }
+}
+
+a:link{
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #ddddddaa;
+}
+
+main{
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.card{
+  outline: 1px solid;
+  padding: 2em;
+  width: min(90%, 75ch);
+  text-align: center;
+}
+
+#counter{
+  font-size: 2em;
+}
+
+.saved-entries{
+  max-width: 75ch;
+}
+
+#saved{
+  line-break: anywhere;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.increment-container{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  all: unset;
+  color:#ddd;
+  margin-block: .5em;
+  padding: 1em;
+  
+  display: block;
+  max-width: 100%;
+  user-select: none;
+  cursor: pointer;
+}
+
+button:not(#increment, #increment10){
+  border-radius: .5em;
+}
+
+button:hover{
+  opacity: .8;
+  font-weight: bold;
+}
+
+button:focus{
+  border: 3px solid yellow;
+}
+
+#increment{
+  background: green;
+  flex: 1 1 0;
+}
+
+#increment10{
+  flex: 1 1 0;
+  background: rgb(0, 100, 0);
+}
+
+#save{
+  background: yellowgreen;
+  color: #222;
+}
+
+#resetcount{
+  background: red;
+}
+
+#resetsaved{
+  outline: 2px solid red;
+  text-align: center;
+}
+
+footer{
+  background: #222;
+  padding: 2em;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-socials > span{
+  text-align: center;
+}
+
+.footer-socials__links{
+  display: inline;
+}
+
+@media screen and (max-width: 30em){
+  footer{
+    flex-direction: column;
+  }
+}
