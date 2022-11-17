@@ -31,7 +31,6 @@ main{
 /* counter styles */
 .counter-container{
   outline: 1px solid;
-  margin-block: 5em;
   padding: 2em;
   width: min(100%, 105ch);
   text-align: center;
