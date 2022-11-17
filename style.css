@@ -13,20 +13,13 @@ body{
   font-family: system-ui, sans-serif;
 }
 
-@media(prefers-color-scheme:dark){
-  body{
-    background: #11213f;
-    color: #ddd;
-  }
-}
-
 a:link{
   color: inherit;
   text-decoration: none;
 }
 
-a:hover{
-  color: #ddddddaa;
+a:visited{
+  color: inherit;
 }
 
 main{
@@ -53,10 +46,6 @@ main{
 }
 
 /* toggle negative numbers */
-#negative{
-  outline: 3px solid azure;
-}
-
 #counter{
   margin: 0;
   font-size: 3rem;
@@ -105,15 +94,19 @@ button:active{
 
 button:hover{
   transform: scale(1.03);
-  color: #ddd;
 }
 
 button:focus{
   outline: 3px solid dodgerblue;
 }
 
+#negative{
+  border: 3px solid;
+}
+
 #increment, #increment10{
   background: green;
+  color: #ddd;
 }
 
 #decrement, #decrement10{
@@ -121,7 +114,7 @@ button:focus{
 }
 
 #save{
-  border: 3px solid azure;
+  border: 3px solid;
 }
 
 #resetsaved{
@@ -133,6 +126,7 @@ button:focus{
 footer{
   background: #222;
   padding: 2em;
+  color: #ddd;
 
   display: flex;
   justify-content: space-between;
@@ -146,5 +140,18 @@ footer a{
 @media screen and (max-width: 30em){
   footer{
     flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme:light){
+  button{
+    color: black;
+  }
+}
+
+@media(prefers-color-scheme:dark){
+  body{
+    background: #11213f;
+    color: #ddd;
   }
 }
