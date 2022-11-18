@@ -21,6 +21,30 @@ let count = 0;
 
 // ==== LISTEN TO BUTTONS ====
 
+// listen to negative btn
+let countToNegative = 0;
+let negativeText = document.getElementById('negativeText');
+
+// false initially, if clicked then set to true.
+// if clicked AGAIN, then set to false again
+negative.addEventListener('click', ()=>{
+  // set to true
+  countToNegative += 1;
+
+  negative.style.backgroundColor = 'blue';
+  negativeText.textContent = "ON";
+
+  if(countToNegative >= 2){
+    countToNegative = 0;
+    negative.style.backgroundColor = 'transparent';
+    negativeText.textContent = "OFF";
+  }
+
+  // reset count to 0
+  count = 0;
+  counter.textContent = count;
+})
+
 // listen to increment btn
 increment.addEventListener('click', ()=>{
   count += 1;
@@ -71,26 +95,4 @@ save.addEventListener('click', ()=>{
 // reset saved entries btn
 resetsaved.addEventListener('click', ()=>{
   saved.textContent = "";
-})
-
-// listen to negative btn
-let countToNegative = 0;
-let negativeText = document.getElementById('negativeText');
-
-// false initially, if clicked then set to true. if clicked AGAIN, then set to false again
-negative.addEventListener('click', ()=>{
-  countToNegative += 1;
-
-  negative.style.backgroundColor = 'blue';
-  negativeText.textContent = "ON";
-
-  if(countToNegative >= 2){
-    countToNegative = 0;
-    negative.style.backgroundColor = 'transparent';
-    negativeText.textContent = "OFF";
-  }
-
-  // reset count to 0
-  count = 0;
-  counter.textContent = count;
 })
