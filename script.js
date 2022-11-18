@@ -77,7 +77,11 @@ decrement10.addEventListener('click', ()=>{
   if(countToNegative == 1){
     count -=10;
   }else{
-    count = 0;
+    if(10 >= count){
+      count = 0;
+    }else{
+      count -= 10;
+    }
   }
   counter.textContent = count;
 })
