@@ -81,6 +81,7 @@ button{
   max-width: 100%;
   user-select: none;
   cursor: pointer;
+  flex: 1 1 0;
 }
 
 button{
@@ -110,6 +111,10 @@ button:focus{
 
 #decrement, #decrement10{
   border: .3rem solid rgb(0, 100, 0);
+}
+
+#resetcount{
+  border: 3px solid;
 }
 
 #save{

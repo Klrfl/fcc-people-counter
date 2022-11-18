@@ -1,6 +1,10 @@
 // buttons
 const counter = document.getElementById('counter');
 
+// negative number btn
+const negative = document.getElementById('negative');
+const resetcount = document.getElementById('resetcount');
+
 // increment
 const increment = document.getElementById('increment');
 const increment10 = document.getElementById('increment10');
@@ -13,9 +17,6 @@ const save = document.getElementById('save');
 // paragraph for number and reset button
 const saved = document.getElementById('saved');
 const resetsaved = document.getElementById('resetsaved');
-
-// negative number btn
-const negative = document.getElementById('negative');
 
 let count = 0;
 
@@ -41,6 +42,12 @@ negative.addEventListener('click', ()=>{
   }
 
   // reset count to 0
+  count = 0;
+  counter.textContent = count;
+})
+
+// listen to resetcount btn
+resetcount.addEventListener('click', ()=>{
   count = 0;
   counter.textContent = count;
 })
@@ -92,8 +99,8 @@ save.addEventListener('click', ()=>{
   countstr = count + "–";
   saved.textContent += countstr;
   // reset counter to 0
-  counter.textContent = "0";
   count = 0;
+  counter.textContent = count;
 })
 
 // reset saved entries btn
