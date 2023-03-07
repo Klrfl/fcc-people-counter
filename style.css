@@ -1,42 +1,42 @@
 /* dark mode and general reset */
-:root{
+:root {
   color-scheme: light dark;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: system-ui, sans-serif;
 }
 
-a:link{
+a:link {
   color: inherit;
   text-decoration: none;
 }
 
-a:visited{
+a:visited {
   color: inherit;
 }
 
-main{
+main {
   display: grid;
   place-items: center;
   min-height: 100vh;
 }
 
 /* counter styles */
-.counter-container{
+.counter-container {
   outline: 1px solid;
   padding: 2em;
   width: min(100%, 105ch);
   text-align: center;
 }
 
-.count-container{
+.count-container {
   padding-block: 2em;
   display: flex;
   align-items: center;
@@ -45,38 +45,38 @@ main{
 }
 
 /* toggle negative numbers */
-#counter{
+#counter {
   margin: 0;
   font-size: 3rem;
 }
 
-#saved{
+#saved {
   line-break: anywhere;
 }
 
 /* buttons */
-.button-container{
+.button-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.button-subcontainer{
+.button-subcontainer {
   display: flex;
   justify-content: center;
   gap: 1em;
 }
 
-.button-subcontainer > button{
+.button-subcontainer > button {
   flex: 1 1 0;
 }
 
-button{
+button {
   all: unset;
-  color:#ddd;
-  margin-block: .5em;
+  color: #ddd;
+  margin-block: 0.5em;
   padding: 1em;
-  
+
   display: block;
   max-width: 100%;
   user-select: none;
@@ -84,50 +84,52 @@ button{
   flex: 1 1 0;
 }
 
-button{
-  border-radius: .5em;
+button {
+  border-radius: 0.5em;
 }
 
-button:active{
+button:active {
   transform: translateY(5%);
 }
 
-button:hover{
+button:hover {
   transform: scale(1.03);
 }
 
-button:focus{
+button:focus {
   outline: 3px solid dodgerblue;
 }
 
-#negative{
+#negative {
   border: 3px solid;
 }
 
-#increment, #increment10{
+#increment,
+#increment10 {
   background: green;
   color: #ddd;
 }
 
-#decrement, #decrement10{
-  border: .3rem solid rgb(0, 100, 0);
+#decrement,
+#decrement10 {
+  border: 0.3rem solid rgb(0, 100, 0);
 }
 
-#resetcount{
+#resetcount {
   border: 3px solid;
 }
 
-#save{
+#save {
   border: 3px solid;
 }
 
-#resetsaved{
-  border: .3rem solid red;
+#resetsaved {
+  border: 0.3rem solid red;
   text-align: center;
 }
 
 /* footer */
-footer{
+footer {
   background: #222;
   padding: 2em;
   color: #ddd;
@@ -137,24 +139,24 @@ footer{
   align-items: center;
 }
 
-footer a{
+footer a {
   padding: 1em;
 }
 
-@media screen and (max-width: 30em){
-  footer{
+@media screen and (max-width: 30em) {
+  footer {
     flex-direction: column;
   }
 }
 
-@media (prefers-color-scheme:light){
-  button{
+@media (prefers-color-scheme: light) {
+  button {
     color: black;
   }
 }
 
-@media(prefers-color-scheme:dark){
-  body{
+@media (prefers-color-scheme: dark) {
+  body {
     background: #11213f;
     color: #ddd;
   }
