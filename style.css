@@ -32,7 +32,7 @@ main {
 .counter-container {
   outline: 1px solid;
   padding: 2em;
-  width: min(100%, 105ch);
+  max-width: 125ch;
   text-align: center;
 }
 
