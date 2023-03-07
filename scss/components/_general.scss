@@ -1,0 +1,31 @@
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+/* counter styles */
+.counter-container {
+  outline: 1px solid;
+  padding: 2em;
+  max-width: 125ch;
+  text-align: center;
+}
+
+.count-container {
+  padding-block: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* toggle negative numbers */
+#counter-display {
+  margin: 0;
+  font-size: 3rem;
+}
+
+#saved {
+  line-break: anywhere;
+}

@@ -1,0 +1,19 @@
+footer {
+  background: #222;
+  padding: 2em;
+  color: #ddd;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer a {
+  padding: 1em;
+}
+
+@media screen and (max-width: 30em) {
+  footer {
+    flex-direction: column;
+  }
+}

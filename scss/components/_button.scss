@@ -1,0 +1,80 @@
+/* buttons */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button-subcontainer {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.button-subcontainer > button {
+  flex: 1 1 0;
+}
+
+button {
+  all: unset;
+  color: #ddd;
+  margin-block: 0.5em;
+  padding: 1em;
+
+  display: block;
+  max-width: 100%;
+  user-select: none;
+  cursor: pointer;
+  flex: 1 1 0;
+}
+
+button {
+  border-radius: 0.5em;
+}
+
+button:active {
+  transform: translateY(5%);
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+button:focus {
+  outline: 3px solid dodgerblue;
+}
+
+#negative {
+  border: 3px solid;
+}
+
+#increment,
+#increment10 {
+  background: green;
+  color: #ddd;
+}
+
+#decrement,
+#decrement10 {
+  border: 0.3rem solid rgb(0, 100, 0);
+}
+
+#resetcount {
+  border: 3px solid;
+}
+
+#save {
+  border: 3px solid;
+}
+
+#resetsaved {
+  border: 0.3rem solid red;
+  text-align: center;
+}
+
+
+@media (prefers-color-scheme: light) {
+  button {
+    color: black;
+  }
+}
