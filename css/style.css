@@ -126,7 +126,8 @@ main {
 
 /* counter styles */
 .counter-container {
-  outline: 1px solid;
+  border-radius: 1rem;
+  background: #23232a;
   padding: 2em;
   max-width: 125ch;
   text-align: center;
@@ -140,7 +141,7 @@ main {
   justify-content: space-around;
 }
 
-/* toggle negative numbers */
+/* when negative numbers is on */
 #counter-display {
   margin: 0;
   font-size: 3rem;
@@ -148,13 +149,6 @@ main {
 
 #saved {
   line-break: anywhere;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #11213f;
-    color: #ddd;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
