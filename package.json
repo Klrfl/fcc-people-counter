@@ -1,0 +1,27 @@
+{
+  "name": "fcc-people-counter",
+  "version": "1.0.0",
+  "description": "Simple counter",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Klrfl/fcc-people-counter.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Efraim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Klrfl/fcc-people-counter/issues"
+  },
+  "homepage": "https://github.com/Klrfl/fcc-people-counter#readme",
+  "devDependencies": {
+    "sass": "^1.58.3"
+  }
+}
