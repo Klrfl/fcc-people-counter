@@ -1,64 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A simple counter I made with HTML, CSS, and JS.">
-  <title>People counter</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main>
-    
-    <div class="counter-container">
-      <div class="info">  
-        <h1>People (Thing) Counter</h1>
-        <p>For counting how many people (or things) there are.</p>
-        <p><strong>Note: You should enable JS on your browser for this counter to work.</strong></p>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple counter I made with HTML, CSS, and JS."
+    />
+    <title>People counter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <noscript>
+      You have to enable JavaScript for this counter to work!
+    </noscript>
 
-      <div class="count-container">
-        <div class="button-subcontainer">
-          <button id="negative" title="include negative numbers">Negative numbers: <span id="negativeText">OFF</span></button>
-          <button id="resetcount" title="reset count to 0">Reset count</button>
-        </div>
-        <div>
-          <p>There are currently</p>
-          <p id="counter">0</p>
-          <p>people (or things).</p>
-        </div>
-      </div>
-      
-      <div class="button-container">
-        <div class="button-subcontainer">
-          <button id="increment" title="increment count (+1)">Increment</button>
-          <button id="increment10" title="increment count (+10)">Increment +10</button>
-        </div>
-        <div class="button-subcontainer">
-          <button id="decrement" title="decrement count (-1)">Decrement</button>
-          <button id="decrement10" title="decrement count (-10)">Decrement -10</button>
-        </div>
-        <div class="button-subcontainer">
-          <button id="save" title="save current count">Save</button>
-          <button id="resetsaved" title="clear saved count">Clear saved count</button>
-        </div>
-      </div>
-      <p class="saved-entries">Previous entries: <span id="saved"></span></p>
-    </div>
-  </main>
+    <main>
+      <div class="counter-container">
+        <header>
+          <h1>Simple Counter</h1>
+        </header>
 
-  <footer>
-    <div class="footer-text">
-      <p>Made by Klrfl, 2022.</p>
-    </div>
-    <div class="footer-socials">
-      <a href="https://github.com/Klrfl" target="_blank"><i class="fa-brands fa-github"></i> Github</a>
-      <a href="https://github.com/Klrfl" target="_blank"><i class="fa-brands fa-codepen"></i> Codepen</a>
-      <a href="mailto:efrayanglain@gmail.com"><i class="fa-solid fa-envelope"></i> Email me</a>
-    </div>
-  </footer>
-  <script src="script.js"></script>
-  <script src="https://kit.fontawesome.com/12334b3056.js" crossorigin="anonymous"></script>
-</body>
+        <section class="count-container">
+          <div class="button-subcontainer">
+            <button id="negative" title="include negative numbers">
+              Negative numbers: <span id="negativeText">OFF</span>
+            </button>
+            <button id="resetcount" title="reset count to 0">
+              Reset count
+            </button>
+          </div>
+          <div>
+            <span id="counter">0</span>
+          </div>
+        </section>
+
+        <section class="button-container">
+          <div class="button-subcontainer">
+            <button id="increment" title="increment count (+1)">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <button id="increment10" title="increment count (+10)">
+              <i class="fa-solid fa-plus"></i>10
+            </button>
+          </div>
+
+          <div class="button-subcontainer">
+            <button id="decrement" title="decrement count (-1)">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <button id="decrement10" title="decrement count (-10)">
+              <i class="fa-solid fa-plus"></i>10
+            </button>
+          </div>
+
+          <div class="button-subcontainer">
+            <button id="save" title="save current count">Save</button>
+            <button id="resetsaved" title="clear saved count">
+              Clear saved count
+            </button>
+          </div>
+        </section>
+        <p class="saved-entries">Previous entries: <span id="saved"></span></p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-text">
+        <p>Made by Klrfl, 2022.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/Klrfl" target="_blank"
+          ><i class="fa-brands fa-github"></i> Github</a
+        >
+        <a href="https://github.com/Klrfl" target="_blank"
+          ><i class="fa-brands fa-codepen"></i> Codepen</a
+        >
+        <a href="mailto:efrayanglain@gmail.com"
+          ><i class="fa-solid fa-envelope"></i> Email me</a
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/12334b3056.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
