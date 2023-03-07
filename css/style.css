@@ -49,22 +49,16 @@ button {
   user-select: none;
   cursor: pointer;
   flex: 1 1 0;
-}
-
-button {
   border-radius: 0.5em;
 }
-
 button:active {
   transform: translateY(5%);
 }
-
+button:focus-visible {
+  outline: 3px solid dodgerblue;
+}
 button:hover {
   transform: scale(1.03);
-}
-
-button:focus {
-  outline: 3px solid dodgerblue;
 }
 
 #negative {
@@ -82,16 +76,12 @@ button:focus {
   border: 0.3rem solid rgb(0, 100, 0);
 }
 
-#resetcount {
-  border: 3px solid;
-}
-
-#save {
+#resetcount, #save {
   border: 3px solid;
 }
 
 #resetsaved {
-  border: 0.3rem solid red;
+  border: 3px solid red;
   text-align: center;
 }
 
@@ -119,6 +109,7 @@ footer a {
   }
 }
 main {
+  background: mintcream;
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -127,7 +118,7 @@ main {
 /* counter styles */
 .counter-container {
   border-radius: 1rem;
-  background: #23232a;
+  background: #ededef;
   padding: 2em;
   max-width: 125ch;
   text-align: center;
@@ -149,6 +140,15 @@ main {
 
 #saved {
   line-break: anywhere;
+}
+
+@media (prefers-color-scheme: dark) {
+  main {
+    background: transparent;
+  }
+  .counter-container {
+    background: #23232a;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

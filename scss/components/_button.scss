@@ -26,23 +26,20 @@ button {
   user-select: none;
   cursor: pointer;
   flex: 1 1 0;
-}
-
-button {
   border-radius: 0.5em;
+
+  &:active{
+    transform: translateY(5%);
+  }
+  &:focus-visible{
+    outline: 3px solid dodgerblue;
+  }
+  
+  &:hover {
+    transform: scale(1.03);
+  }
 }
 
-button:active {
-  transform: translateY(5%);
-}
-
-button:hover {
-  transform: scale(1.03);
-}
-
-button:focus {
-  outline: 3px solid dodgerblue;
-}
 
 #negative {
   border: 3px solid;
@@ -59,16 +56,12 @@ button:focus {
   border: 0.3rem solid rgb(0, 100, 0);
 }
 
-#resetcount {
-  border: 3px solid;
-}
-
-#save {
+#resetcount,#save {
   border: 3px solid;
 }
 
 #resetsaved {
-  border: 0.3rem solid red;
+  border: 3px solid red;
   text-align: center;
 }
 
