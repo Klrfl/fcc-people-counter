@@ -1,4 +1,5 @@
 main {
+  background: mintcream;
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -7,7 +8,7 @@ main {
 /* counter styles */
 .counter-container {
   border-radius: 1rem;
-  background: #23232a;
+  background: #ededef;
   padding: 2em;
   max-width: 125ch;
   text-align: center;
@@ -29,4 +30,13 @@ main {
 
 #saved {
   line-break: anywhere;
+}
+
+@media (prefers-color-scheme: dark){
+  main{
+    background: transparent;
+  }
+  .counter-container{
+  background: #23232a;
+  }
 }
