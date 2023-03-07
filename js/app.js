@@ -27,7 +27,7 @@ let countToNegative = 0;
 let negativeText = document.getElementById("negativeText");
 
 // false initially, if clicked then set to true.
-// if clicked AGAIN, then set to false again
+// if clicked AGAIN, then  set to false again
 negative.addEventListener("click", () => {
   // set to true
   countToNegative += 1;
@@ -35,14 +35,17 @@ negative.addEventListener("click", () => {
   negative.style.backgroundColor = "blue";
   negativeText.textContent = "ON";
 
-  if (countToNegative >= 2) {
+  if (countToNegative !== 1) {
     countToNegative = 0;
     negative.style.backgroundColor = "transparent";
     negativeText.textContent = "OFF";
   }
 
   // reset count to 0
-  count = 0;
+  if (count <= 0) {
+    count = 0;
+  }
+
   counterDisplay.textContent = count;
 });
 
@@ -67,7 +70,7 @@ increment10.addEventListener("click", () => {
 // listen to decrement btn
 decrement.addEventListener("click", () => {
   // check if countToNegative is true
-  if (countToNegative == 1) {
+  if (countToNegative === 1) {
     count -= 1;
   } else {
     if (count > 0) {
@@ -81,7 +84,7 @@ decrement.addEventListener("click", () => {
 });
 
 decrement10.addEventListener("click", () => {
-  if (countToNegative == 1) {
+  if (countToNegative === 1) {
     count -= 10;
   } else {
     if (10 >= count) {
