@@ -1,9 +1,2 @@
 @use './resets';
 @use './components';
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #11213f;
-    color: #ddd;
-  }
-}
