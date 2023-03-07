@@ -121,15 +121,19 @@ main {
   background: #ededef;
   padding: 2em;
   max-width: 125ch;
+  aspect-ratio: 3/5;
   text-align: center;
 }
 
 .count-container {
-  padding-block: 2em;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.counter-display-container {
+  margin-block: 2rem;
 }
 
 /* when negative numbers is on */
