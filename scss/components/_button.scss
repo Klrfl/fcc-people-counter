@@ -28,18 +28,17 @@ button {
   flex: 1 1 0;
   border-radius: 0.5em;
 
-  &:active{
+  &:active {
     transform: translateY(5%);
   }
-  &:focus-visible{
+  &:focus-visible {
     outline: 3px solid dodgerblue;
   }
-  
+
   &:hover {
     transform: scale(1.03);
   }
 }
-
 
 #negative {
   border: 3px solid;
@@ -47,16 +46,17 @@ button {
 
 #increment,
 #increment10 {
-  background: green;
+  background: #128512;
   color: #ddd;
 }
 
 #decrement,
 #decrement10 {
-  border: 0.3rem solid rgb(0, 100, 0);
+  border: 0.3rem solid #128512;
 }
 
-#resetcount,#save {
+#resetcount,
+#save {
   border: 3px solid;
 }
 
@@ -64,7 +64,6 @@ button {
   border: 3px solid red;
   text-align: center;
 }
-
 
 @media (prefers-color-scheme: light) {
   button {
